@@ -31,6 +31,8 @@
     nixosConfigurations = {
       # The first configuration ever made.
       youkai-no-kenja = let
+        name = "youkai-no-kenja";
+
         # Define our arguments to be passed into our output config.
         specialArgs = {
           inherit
@@ -39,6 +41,7 @@
             ;
         };
       in
+
       # What does this reference?
       # ─────────────────────────────────────────────────────────────
       # This I think basically means...
@@ -48,12 +51,16 @@
       # argument of the function.
       nixpkgs.lib.nixosSystem 
       {
+        # This will make all modules have all the things inside specialArgs.
+        inherit specialArgs;
+
         modules = (map mylib.referenceFromRoot 
         [
           # Common
 
-          # Configuration specific
 
+          # Configuration specific
+          hosts/${name}
 
         ]) ++ [
           # What does this reference?
@@ -65,9 +72,15 @@
           # and it takes a set as an arg.
           home-manager.nixosModules.home-manager
           {
-            
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.extraSpecialArgs = inputs // specialArgs;
+            home-manager.users.${myvars.username}.imports = map mylib.relativeToRoot [
+              "home/hosts/${name}"
+            ];
           }
-        ]
+        ];
       };
 
       # furture framework configuration

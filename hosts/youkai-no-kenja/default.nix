@@ -32,7 +32,7 @@ in
   };
 
   # Luks encryption
-  # boot.initrd.luks.devices.[UUID].device = [UUID];
+  boot.initrd.luks.devices."luks-195ef175-b3ea-4640-a801-ca800b16783c".device = "/dev/disk/by-uuid/195ef175-b3ea-4640-a801-ca800b16783c";
 
   # Set your time zone.
   time.timeZone = "America/New_York";

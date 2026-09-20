@@ -6,7 +6,7 @@
   # add our users
   user.users.${myvars.username} = {
     isNormalUser = true;
-    description = "Youkai No Kenja";
+    description = myvars.username;
     extraGroups = [ "networkmanager" "wheel" ];
   };
   

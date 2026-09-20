@@ -9,8 +9,8 @@ in
 {
   imports = [
     # Common
-    ./modules/kde.nix
-    ./modules/system.nix
+    ../../modules/kde.nix
+    ../../modules/system.nix
 
     # Include auto-generated system scan file
     ./hardware-configuration.nix
@@ -20,7 +20,7 @@ in
   boot.loader = {
     # common
     efi.canTouchEfiVariables = true;
-    systemd.boot.enable = false;
+    systemd-boot.enable = false;
 
     # Enable grub loader
     grub = {

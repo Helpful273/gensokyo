@@ -1,16 +1,15 @@
 {
+  pkgs,
   myvars,
   ...
 }:
 {
   # add our users
-  user.users.${myvars.username} = {
+  users.users.${myvars.username} = {
     isNormalUser = true;
     description = myvars.username;
     extraGroups = [ "networkmanager" "wheel" ];
   };
-  
-  trusted-users = [ myvars.username ];
 
   # Enable flakes.
   nix.settings = {
@@ -18,6 +17,8 @@
       "nix-command"
       "flakes"
     ];
+
+    trusted-users = [ myvars.username ];
   };
 
   # Set all localisation fields. 
@@ -84,5 +85,5 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = 26.05;
+  system.stateVersion = "26.05";
 }

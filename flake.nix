@@ -60,7 +60,7 @@
 
 
           # Configuration specific
-          hosts/${name}
+          "hosts/${name}"
 
         ]) ++ [
           # What does this reference?
@@ -76,7 +76,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs // specialArgs;
-            home-manager.users.${myvars.username}.imports = map mylib.relativeToRoot [
+            home-manager.users.${myvars.username}.imports = map mylib.referenceFromRoot [
               "home/hosts/${name}"
             ];
           }

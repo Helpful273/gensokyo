@@ -18,7 +18,7 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with pkg.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
     ];
   };

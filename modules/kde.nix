@@ -1,6 +1,13 @@
 {
   ...
 }:
+
+# WARNING
+# WARNING
+# WARNING
+#
+# This module should not be replaced until you finish making custom DE
+
 {
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.

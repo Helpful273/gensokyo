@@ -10,8 +10,8 @@ in
 {
   imports = (map mylib.relativeToRoot [
     # Common
-    "modules/kde.nix"
-    "modules/system.nix"
+    "modules/env/kde.nix"
+    "modules/base"
   ]) ++ [
     # Include auto-generated system scan file
     ./hardware-configuration.nix

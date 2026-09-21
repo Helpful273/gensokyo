@@ -1,0 +1,10 @@
+{
+  mylib,
+  ...
+}:
+{
+  imports = [
+    ./base
+    ./desktop
+  ];
+}

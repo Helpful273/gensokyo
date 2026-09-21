@@ -38,7 +38,7 @@ in
   # Set your time zone.
   time.timeZone = "America/New_York";
 
-  # Dual-Booting
+  # Dual-Booting time fix
   time.hardwareClockInLocalTime = true;
 
   # Network

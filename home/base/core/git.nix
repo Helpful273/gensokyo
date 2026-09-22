@@ -3,7 +3,7 @@
   ...
 }:
 {
-  program.git = {
+  programs.git = {
     enable = true;
 
     settings = {

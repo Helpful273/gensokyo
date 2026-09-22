@@ -54,7 +54,7 @@
         # This will make all modules have all the things inside specialArgs.
         inherit specialArgs;
 
-        modules = (map mylib.referenceFromRoot 
+        modules = (map mylib.fromRoot 
         [
           # Common
 

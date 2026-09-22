@@ -3,8 +3,8 @@
   ...
 }:
 {
-  imports = [
-    ./base
-    ./desktop
-  ];
+  imports = (map mylib.fromRoot [
+    modules/base
+    modules/desktop
+  ]);
 }

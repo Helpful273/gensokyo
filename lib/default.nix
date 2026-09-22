@@ -5,10 +5,10 @@
   #
   # Example of usage:
   # ─────────────────────────────────────────────────────────────
-  # map mylib.referenceFromRoot []
+  # map mylib.fromRoot []
   # It will reference everything from the root directory of this
   # project.
-  referenceFromRoot = lib.path.append ../.;
+  fromRoot = lib.path.append ../.;
 
   # read up and reimplent github @ryan4yin's scanPath
   # should return form [ parentPath/onedeep/ parentPath/node.nix ]

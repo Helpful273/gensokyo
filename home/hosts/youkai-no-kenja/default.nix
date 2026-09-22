@@ -1,14 +1,15 @@
 { 
   config, 
   pkgs, 
-  myvars, 
+  myvars,
+  mylib,
   ... 
 }:
 {
   # defaults
-  imports = [
-    ../../enable/gui.nix
-  ];
+  imports = (map mylib.fromRoot [
+    "home/enable/gui.nix"
+  ]);
 
   # modules
 }

@@ -4,7 +4,7 @@
 }:
 {
   imports = (map mylib.fromRoot [
-    modules/base
-    modules/desktop
+    "modules/base"
+    "modules/desktop"
   ]);
 }

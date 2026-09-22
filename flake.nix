@@ -76,7 +76,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs // specialArgs;
-            home-manager.users.${myvars.username}.imports = map mylib.referenceFromRoot [
+            home-manager.users.${myvars.username}.imports = map mylib.fromRoot [
               "home/hosts/${name}"
             ];
           }

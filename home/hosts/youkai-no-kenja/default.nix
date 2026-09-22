@@ -5,13 +5,8 @@
   ... 
 }:
 {
-  home.username = myvars.username;
-  home.homeDirectory = "/home/helpful";
-
-  home.packages = with pkgs; [
-    zip
-    unzip
-    p7zip
+  imports = [
+    ../../enable/gui.nix
   ];
 
   programs.git.enable = true;

@@ -3,10 +3,7 @@
   mylib,
   pkgs,
   ...
-}@args:
-let
-  
-in
+}:
 {
   imports = (map mylib.relativeToRoot [
     # Common

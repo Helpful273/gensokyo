@@ -11,7 +11,7 @@ in
     enable = lib.mkEnableOption "Enables base KDE Plasma desktop environment.";
   };
 
-  config = lib.mkIf cfg.enable = {
+  config = lib.mkIf cfg.enable {
     services.xserver.enable = true;
 
     # Enable the KDE Plasma Desktop Environment.

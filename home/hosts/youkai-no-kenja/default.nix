@@ -10,5 +10,5 @@
   ]);
 
   # modules
-  modules.desktop.baseKDE.enable = true;
+  baseKDE.enable = true;
 }

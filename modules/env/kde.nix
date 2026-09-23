@@ -4,10 +4,10 @@
   ...
 }:
 let
-  cfg = config.modules.desktop.baseKDE;
+  cfg = config.baseKDE;
 in
 {
-  options.modules.desktop.baseKDE = {
+  options.baseKDE = {
     enable = lib.mkEnableOption "Enables base KDE Plasma desktop environment.";
   };
 

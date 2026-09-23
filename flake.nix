@@ -79,6 +79,8 @@
             home-manager.users.${myvars.username}.imports = map mylib.fromRoot [
               "home/hosts/${name}"
             ];
+
+            backupFileExtension = "backup";
           }
         ];
       };

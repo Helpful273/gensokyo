@@ -2,7 +2,7 @@
   lib,
   pkgs,
   config,
-  ...,
+  ...
 }:
 let
   cfg = config.modules.desktop.niri;

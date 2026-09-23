@@ -7,7 +7,6 @@
 {
   imports = (map mylib.fromRoot [
     # Common
-    "modules/env/kde.nix"
     "modules/desktop.nix"
   ]) ++ [
     # Include auto-generated system scan file

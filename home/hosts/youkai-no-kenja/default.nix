@@ -1,7 +1,5 @@
 { 
-  config, 
-  pkgs, 
-  myvars,
+  config,
   mylib,
   ... 
 }:
@@ -12,4 +10,5 @@
   ]);
 
   # modules
+  modules.desktop.baseKDE.enable = true;
 }

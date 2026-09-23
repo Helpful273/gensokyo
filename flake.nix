@@ -32,7 +32,6 @@
       # The first configuration ever made.
       youkai-no-kenja = let
         name = "youkai-no-kenja";
-
         # Define our arguments to be passed into our output config.
         specialArgs = {
           inherit
@@ -53,6 +52,7 @@
       {
         # This will make all modules have all the things inside specialArgs.
         inherit specialArgs;
+        system = "x86_64-linux";
 
         modules = (map mylib.fromRoot 
         [

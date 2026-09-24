@@ -8,7 +8,7 @@ let
 in
 {
   options.modules.baseKDE = {
-    enable = lib.mkEnableOption "Enables base KDE Plasma desktop environment.";
+    enable = lib.mkEnableOption "kde plasma";
   };
 
   config = lib.mkIf cfg.enable {

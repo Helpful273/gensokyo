@@ -17,16 +17,16 @@
   };
 
   outputs = inputs: let
-    inherit ( inputs.nixpkgs ) lib;
+    inherit (inputs.nixpkgs) lib;
 
     args = {
       inherit inputs;
 
-      myvars = import ./vars { inherit lib; };
-      mylib = import ./lib { inherit lib; };
+      myvars = import ./vars {inherit lib;};
+      #mylib = import ./lib { inherit lib; };
     };
   in
   inputs.flake-parts.lib.mkFlake 
-    { inherit args; }
-    ( inputs.import-tree ./src );
+    {inherit args;}
+    (inputs.import-tree ./modules);
 }

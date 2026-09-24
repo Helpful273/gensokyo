@@ -57,8 +57,7 @@
         modules = (map mylib.fromRoot 
         [
           # Common
-          "modules/desktop"
-
+          
           # Configuration specific
           "hosts/${name}"
 

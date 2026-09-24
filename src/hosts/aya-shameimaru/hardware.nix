@@ -1,8 +1,5 @@
-let
-  inherit (import ./) hostName;
-in
 {
-  flake.nixosModules.${hostName+"-host"} = {
+  flake.nixosModules.ayaShameimaruHost = {
     config, 
     lib, 
     pkgs, 

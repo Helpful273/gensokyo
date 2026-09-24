@@ -1,9 +1,6 @@
 {self, inputs, ...}:
-let
-  inherit (import ./) hostName;
-in
 {
-  flake.nixosModules.${hostName+"-host"} = {...}: {
+  flake.nixosModules.ayaShameimaruHost = {...}: {
     imports = [
       self.nixosModules.baseConfig
     ];

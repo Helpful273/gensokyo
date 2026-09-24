@@ -1,4 +1,6 @@
 # 幻想郷-gensokyo
+TODO: restructure for dendritic pattern
+
 restart of previous nix-config
 
 to rebuild for current sys

@@ -80,7 +80,7 @@
               "home/hosts/${name}"
             ];
 
-            homemanager.backupFileExtension = "backup";
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };

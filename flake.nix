@@ -77,7 +77,7 @@
 
             home-manager.extraSpecialArgs = inputs // specialArgs;
             home-manager.users.${myvars.username}.imports = map mylib.fromRoot [
-              "home/hosts/${name}"
+              "home/hosts/${name}.nix"
             ];
 
             home-manager.backupFileExtension = "backup";

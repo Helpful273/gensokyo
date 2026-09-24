@@ -4,10 +4,10 @@
   ...
 }:
 let
-  cfg = config.modules.baseKDE;
+  cfg = config.modules.kdePlasmaEnv;
 in
 {
-  options.modules.baseKDE = {
+  options.modules.kdePlasmaEnv = {
     enable = lib.mkEnableOption "kde plasma";
   };
 

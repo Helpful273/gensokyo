@@ -10,5 +10,5 @@
   ]);
 
   # modules
-  modules.baseKDE.enable = true;
+  modules.kdePlasmaEnv.enable = true;
 }

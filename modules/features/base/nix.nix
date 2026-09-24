@@ -1,9 +1,6 @@
+{self, ...}:
 {
-  flake.nixosModules.baseConfig = {
-    myvars, 
-    lib, 
-    ...
-  }: {
+  flake.nixosModules.baseConfig = {lib, ...}: {
     nixpkgs.config.allowUnfree = lib.mkForce true;
 
     # Configure nix settings.
@@ -15,7 +12,7 @@
       ];
 
       # Privilege
-      trusted-users = [ myvars.username ];
+      trusted-users = ["helpful"];
 
       # Auto store directory optimisation
       auto-optimise-store = true;

@@ -3,6 +3,7 @@
   flake.nixosModules.youkaiNoKenjaHost = {...}: {
     imports = [
       self.nixosModules.desktopConfig
+      self.nixosModules.kdePlasmaEnv
       self.nixosModules.grubBootLoader
     ];
 
@@ -13,5 +14,7 @@
 
     networking.hostName = "youkai-no-kenja";
     networking.networkmanager.enable = true;
+
+    system.stateVersion = "26.05";
   };
 }

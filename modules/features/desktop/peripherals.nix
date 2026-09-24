@@ -33,5 +33,5 @@
     services = {
       printing.enable = true;
     };
-  }
+  };
 }

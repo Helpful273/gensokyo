@@ -1,7 +1,7 @@
 {self, ...}: {
-  flake.nixosModules.desktopConfig = {}: {
+  flake.nixosModules.desktopConfig = {...}: {
     imports = [
-      self.baseConfig
+      self.nixosModules.baseConfig
     ];
   };
 }

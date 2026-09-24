@@ -1,12 +1,13 @@
+{self, ...}:
 {
-  flake.nixosModules.baseConfig = {myvars, ...}: {
-    users.users.${myvars.username} = {
+  flake.nixosModules.baseConfig = {...}: {
+    users.users.helpful = {
       isNormalUser = true;
-      description = myvars.username;
+      description = "Helpful";
       extraGroups = [ 
         "networkmanager" 
         "wheel" 
       ];
     };
-  }
+  };
 }

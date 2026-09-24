@@ -1,4 +1,3 @@
-{ self, inputs, ... }:
 {
   flake.nixosModules.grubBootLoader = { ... }: {
     boot.loader = {
@@ -14,5 +13,5 @@
         device = "nodev";
       };
     };
-  }
+  };
 }

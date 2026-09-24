@@ -8,7 +8,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapple-modules";
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -16,17 +16,7 @@
     };
   };
 
-  outputs = inputs: let
-    inherit (inputs.nixpkgs) lib;
-
-    args = {
-      inherit inputs;
-
-      myvars = import ./vars {inherit lib;};
-      #mylib = import ./lib { inherit lib; };
-    };
-  in
-  inputs.flake-parts.lib.mkFlake 
-    {inherit args;}
+  outputs = inputs: inputs.flake-parts.lib.mkFlake 
+    {inherit inputs;}
     (inputs.import-tree ./modules);
 }

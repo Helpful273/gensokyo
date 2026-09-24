@@ -10,5 +10,5 @@
   ]);
 
   # modules
-  baseKDE.enable = true;
+  modules.baseKDE.enable = true;
 }

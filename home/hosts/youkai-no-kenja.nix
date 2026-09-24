@@ -10,5 +10,4 @@
   ]);
 
   # modules
-  modules.kdePlasmaEnv.enable = true;
 }

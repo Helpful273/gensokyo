@@ -1,5 +1,6 @@
 # 幻想郷-gensokyo
-TODO: restructure for dendritic pattern
+TODO: undo dendritic pattern, abstraction for me does not work well
+6e2ffa7f1486ff773beb707051de7156fb5b2a14
 
 restart of previous nix-config
 

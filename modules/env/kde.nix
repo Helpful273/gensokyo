@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.

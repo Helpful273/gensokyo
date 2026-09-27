@@ -4,7 +4,7 @@
   ...
 }:
 let
-  cfg = config.modules.environment.niri
+  cfg = config.modules.environment.niri;
 in
 {
   options = {

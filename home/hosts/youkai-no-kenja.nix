@@ -5,9 +5,7 @@
 {
   # defaults
   imports = (map mylib.fromRoot [
-    "home/enable/gui.nix"
+    "home/home.nix"
+    "home/profiles/desktop.nix"
   ]);
-
-  # modules
-  modules.desktop.niri.enable = true;
 }

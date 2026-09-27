@@ -5,24 +5,18 @@
 {
   imports = (map mylib.fromRoot [
     # Common
-    "modules/bootloaders/grub.nix"
     "modules/env/kde.nix"
-    "modules/desktop.nix"
+    "modules/profiles/desktop.nix"
   ]) ++ [
     # Include auto-generated system scan file
     ./hardware-configuration.nix
   ];
 
-  # Luks encryption
   boot.initrd.luks.devices."luks-195ef175-b3ea-4640-a801-ca800b16783c".device = "/dev/disk/by-uuid/195ef175-b3ea-4640-a801-ca800b16783c";
 
-  # Set your time zone.
   time.timeZone = "America/New_York";
-
-  # Dual-Booting time fix
   time.hardwareClockInLocalTime = true;
-
-  # Network
+  
   networking.hostName = "youkai-no-kenja";
   networking.networkmanager.enable = true;
 

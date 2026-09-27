@@ -9,7 +9,7 @@ let
 in
 {
   options = {
-    modules.programs.core.git.enable = "Versioning tool";
+    modules.programs.core.git.enable = lib.mkEnableOption "Versioning tool";
   };
 
   config = lib.mkIf cfg.enable {

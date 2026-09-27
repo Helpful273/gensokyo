@@ -8,7 +8,7 @@ let
 in
 {
   options = {
-    modules.terminal.emulators.kitty.enable = mkEnableOption "GPU accelerated terminal emulator";
+    modules.terminal.emulators.kitty.enable = lib.mkEnableOption "GPU accelerated terminal emulator";
   };
 
   config = lib.mkIf cfg.enable {

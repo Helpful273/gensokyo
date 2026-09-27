@@ -11,7 +11,7 @@ in
     modules.terminal.programs.btop.enable = lib.mkEnableOption "System monitoring";
   };
 
-  config = lib.mkIf cfg.enable = {
+  config = lib.mkIf cfg.enable {
     programs.btop = {
       enable = true;
 

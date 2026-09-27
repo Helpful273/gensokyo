@@ -1,0 +1,9 @@
+{
+  pkgs,
+  ...
+}:
+{
+  fonts = with pkgs; [
+    
+  ];
+}

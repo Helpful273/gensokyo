@@ -3,8 +3,6 @@
   ...
 }:
 {
-  # AUDIO
-
   environment.systemPackages = with pkgs; [
     pulseaudio
     easyeffects
@@ -20,18 +18,13 @@
     #jack.enable = true;
 
     # Use the WirePlumber session manager
-    wireplumber.enable = true;
+    #wireplumber.enable = true;
   };
 
-  # Disable pulse audio to avoid confliction with pipewire
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
-  # BLUETOOTH
-
   hardware.bluetooth.enable = true;
-
-  # MISC
 
   services = {
     printing.enable = true;

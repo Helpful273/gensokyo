@@ -4,7 +4,7 @@
 }:
 {
   imports = (map mylib.fromRoot [
-    "modules/core"
-    "modules/harddware"
+    "system/core"
+    "system/hardware"
   ]);
 }

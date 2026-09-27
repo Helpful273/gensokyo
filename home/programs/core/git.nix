@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = modules.programs.core.git;
+  cfg = config.modules.programs.core.git;
 in
 {
   options = {
-    programs.core.git.enable = "Versioning tool";
+    modules.programs.core.git.enable = "Versioning tool";
   };
 
   config = lib.mkIf cfg.enable {

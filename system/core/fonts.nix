@@ -3,7 +3,7 @@
   ...
 }:
 {
-  fonts = with pkgs; [
+  #fonts = with pkgs; [
     
-  ];
+  #];
 }

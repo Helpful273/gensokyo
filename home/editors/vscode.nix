@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = modules.editors.vscode;
+  cfg = config.modules.editors.vscode;
 in
 {
   options = {
-    editors.vscode.enable = lib.mkEnableOption "All in one code editor with huge extension marketplace";
+    modules.editors.vscode.enable = lib.mkEnableOption "All in one code editor with huge extension marketplace";
   };
 
   config = lib.mkIf cfg.enable {

@@ -4,11 +4,11 @@
   ...
 }:
 let
-  cfg = modules.terminal.programs.btop;
+  cfg = config.modules.terminal.programs.btop;
 in
 {
   options = {
-    terminal.programs.btop.enable = lib.mkEnableOption "System monitoring";
+    modules.terminal.programs.btop.enable = lib.mkEnableOption "System monitoring";
   };
 
   config = lib.mkIf cfg.enable = {

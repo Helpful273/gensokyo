@@ -4,11 +4,11 @@
   ...
 }:
 let
-  cfg = modules.terminal.emulators.kitty;
+  cfg = config.modules.terminal.emulators.kitty;
 in
 {
   options = {
-    terminal.emulators.kitty.enable = mkEnableOption "GPU accelerated terminal emulator";
+    modules.terminal.emulators.kitty.enable = mkEnableOption "GPU accelerated terminal emulator";
   };
 
   config = lib.mkIf cfg.enable {

@@ -5,8 +5,8 @@
 {
   imports = (map mylib.fromRoot [
     # Common
-    "modules/env/kde.nix"
-    "modules/profiles/desktop.nix"
+    "system/env/kde.nix"
+    "system/profiles/desktop.nix"
   ]) ++ [
     # Include auto-generated system scan file
     ./hardware-configuration.nix

@@ -1,5 +1,4 @@
 {
-  mylib,
   myvars,
   ...
 }:

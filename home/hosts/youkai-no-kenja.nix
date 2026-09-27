@@ -9,4 +9,5 @@
   ]);
 
   # modules
+  modules.desktop.niri.enable = true;
 }

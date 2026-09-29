@@ -5,7 +5,7 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-    modesettings.enable = true;
+    modesetting.enable = true;
   };
   
   hardware.graphics =  {

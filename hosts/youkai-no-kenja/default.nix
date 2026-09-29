@@ -5,9 +5,12 @@
 {
   imports = (map mylib.fromRoot [
     # Common
-    "system/env/kde.nix"
+    #"system/env/kde.nix"
     "system/profiles/desktop.nix"
   ]) ++ [
+    # Host Specific
+    #./nvidia-hardware.nix
+
     # Include auto-generated system scan file
     ./hardware-configuration.nix
   ];

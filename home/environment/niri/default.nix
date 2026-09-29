@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 let
@@ -12,14 +13,29 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.niri = {
+    home.packages = with pkgs; [
+      xwayland-satellite
+    ];
+
+    wayland.windowManager.niri = let
+      extraConfigs = lib.mkMerge [
+        (import ./configs/keybindings.nix)
+      ];
+    in {
       enable = true;
 
       settings = {
         spawn-at-startup = [
-          ["noctalia"]
-        ]
-      };
+          "noctalia"
+        ];
+
+        input.keyboard.xkb = {
+          layout = "us";
+        };
+
+        layout.gaps = 8;
+        layout.shadow.draw-behind-window = true;
+      } // extraConfigs;
     };
   };
 }

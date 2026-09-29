@@ -14,6 +14,12 @@ in
   config = lib.mkIf cfg.enable {
     programs.niri = {
       enable = true;
+
+      settings = {
+        spawn-at-startup = [
+          ["noctalia"]
+        ]
+      };
     };
   };
 }

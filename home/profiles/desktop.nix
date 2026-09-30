@@ -6,6 +6,10 @@
 
     programs = {
       core.git.enable = true;
+
+      browsers.firefox.enable = true;
+
+      social.vesktop.enable = true;
     };
 
     terminal = {

@@ -9,7 +9,7 @@ let
 in
 {
   options = {
-    modules.programs.browsers.firefox = lib.mkEnableOption "Firefox browser";
+    modules.programs.browsers.firefox.enable = lib.mkEnableOption "Firefox browser";
   };
 
   config = lib.mkIf cfg.Enable {

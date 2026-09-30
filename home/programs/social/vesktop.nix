@@ -9,7 +9,7 @@ let
 in
 {
   options = {
-    modules.programs.social.vesktop = lib.mkEnableOption "Discord communication";
+    modules.programs.social.vesktop.enable = lib.mkEnableOption "Discord communication";
   };
 
   config = lib.mkIf cfg.Enable {

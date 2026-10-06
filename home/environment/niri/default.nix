@@ -18,26 +18,17 @@ in
     ];
 
     wayland.windowManager.niri = let
-      extraConfigs = lib.mkMerge [
+      settings = lib.mkMerge [
         (import ./configs/keybindings.nix)
         (import ./configs/noctalia-shell.nix)
         (import ./configs/window-rules.nix)
+        (import ./configs/layout.nix)
+        (import ./configs/input.nix)
+        (import ./configs/spawn-at-startup.nix)
       ];
     in {
+      inherit settings;
       enable = true;
-
-      settings = {
-        spawn-at-startup = [
-          "noctalia"
-        ];
-
-        input.keyboard.xkb = {
-          layout = "us";
-        };
-
-        layout.gaps = 8;
-        layout.shadow.draw-behind-window = true;
-      } // extraConfigs;
     };
   };
 }

@@ -1,0 +1,5 @@
+{
+  spawn-at-startup = [
+    "noctalia"
+  ];
+}

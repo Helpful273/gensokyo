@@ -1,8 +1,10 @@
 {
-  window-rules = [
+  _children = [
     {
-      matches = [{app-id = "firefox";}];
-      open-fullscreen = true;
+      window-rule._children = [
+        {match._props = {app-id = "firefox";};}
+        {open-maximized = true;}
+      ];
     }
   ];
 }

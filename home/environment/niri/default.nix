@@ -20,6 +20,8 @@ in
     wayland.windowManager.niri = let
       extraConfigs = lib.mkMerge [
         (import ./configs/keybindings.nix)
+        (import ./configs/noctalia-shell.nix)
+        (import ./configs/window-rules.nix)
       ];
     in {
       enable = true;

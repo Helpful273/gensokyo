@@ -19,11 +19,38 @@
 
     "Mod+Page_Up".focus-workspace-up = {};
     "Mod+Page_Down".focus-workspace-down = {};
+    "Mod+Ctrl+Page_Up".move-column-to-workspace-up = {};
+    "Mod+Ctrl+Page_Down".move-column-to-workspace-down = {};
 
+    # Modify
+    "Mod+Q".close-window = {};
+
+    "Mod+F".maximize-column = {};
+    "Mod+Shift+F".fullscreen-window = {};
+    
+    "Mod+Minus".set-column-width = "-10%";
+    "Mod+Equal".set-column-width = "+10%";
+    #"Mod+Minus".set-column-width = "-10";
+    #"Mod+Equal".set-column-width = "+10";
+    
+    "Mod+Shift+Minus".set-window-height = "-10%";
+    "Mod+Shift+Equal".set-window-height = "+10%";
+    #"Mod+Minus".set-winddow-height = "-10";
+    #"Mod+Equal".set-winddow-height = "+10";
+
+    "Mod+BracketLeft".consume-or-expel-window-left = {};
+    "Mod+BracketRight".consume-or-expel-window-right = {};
+
+    "Mod+Comma".consume-window-into-column = {};
+    "Mod+Period".expel-window-from-column = {};
+
+    # Floating
+    "Mod+V".toggle-window-floating = {};
+
+    # noct
     
 
     # Misc
     "Mod+Return".spawn = "kitty";
-    "Mod+Q".close-window = {};
   };
 }

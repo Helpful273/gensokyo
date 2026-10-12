@@ -22,8 +22,7 @@ in
         (import ./configs/keybindings.nix)
         (import ./configs/noctalia-shell.nix)
         (import ./configs/window-rules.nix)
-        (import ./configs/layout.nix)
-        (import ./configs/input.nix)
+        (import ./configs/general.nix)
         (import ./configs/spawn-at-startup.nix)
       ];
     in {

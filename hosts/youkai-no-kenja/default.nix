@@ -9,7 +9,7 @@
     "system/profiles/desktop.nix"
   ]) ++ [
     # Host Specific
-    #./nvidia-hardware.nix
+    ./nvidia-hardware.nix
 
     # Include auto-generated system scan file
     ./hardware-configuration.nix

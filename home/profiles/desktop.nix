@@ -15,6 +15,7 @@
     terminal = {
       emulators.kitty.enable = true;
       programs.btop.enable = true;
+      programs.yazi.enable = true;
     };
 
     environment = {

@@ -14,6 +14,10 @@ in
   config = lib.mkIf cfg.enable {
     programs.fish = {
       enable = true;
+
+      interactiveShellInit = ''
+        set fish_greeting ""
+      '';
     };
   };
 }

@@ -28,7 +28,7 @@
 
     focus-ring = {
       width = 4;
-      active-color = "rgb(255, 145, 176)";
+      active-color = "#ff91b0";
     };
   };
 

@@ -13,7 +13,12 @@
     };
 
     terminal = {
+      # terminal stuffs
       emulators.kitty.enable = true;
+      programs.starship.enable = true;
+      shell.fish.enable = true;
+
+      # programs
       programs.btop.enable = true;
       programs.yazi.enable = true;
     };

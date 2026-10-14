@@ -52,8 +52,8 @@ in
         };
 
         directory = {
-          style = "bg:${colour2} fg:${textColour}";
-          format = "[ $path ]($style)";
+          style = "bg:${colour2}";
+          format = "[  $path ]($style)";
           truncation_length = 3;
           truncation_symbol = ".../";
         };
@@ -70,8 +70,8 @@ in
         time = {
           disabled = false;
           style = "bg:${colour4} fg:${textColour}";
-          time_format = "%R";
-          format = "[  $time ]($style)";
+          time_format = "%I:%M %p";
+          format = "[   $time ]($style)";
         };
       };
     };
